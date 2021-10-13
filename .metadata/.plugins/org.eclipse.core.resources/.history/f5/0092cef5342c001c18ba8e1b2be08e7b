@@ -42,17 +42,17 @@ public class TestBase extends AbstractTestNGCucumberTests {
 
 
 
-	@AfterSuite
-	public void stopDriver() 
-	{
-		driver.close();
-	}
-	
-	@AfterTest
-	public void takeScreenShot() throws IOException 
-	{
-		Helper.captureScreenshot(driver,"Photo");
-	}
+//	@AfterSuite
+//	public void stopDriver() 
+//	{
+//		driver.close();
+//	}
+//	
+//	@AfterTest
+//	public void takeScreenShot() throws IOException 
+//	{
+//		Helper.captureScreenshot(driver,"Photo");
+//	}
 	
 	
 
