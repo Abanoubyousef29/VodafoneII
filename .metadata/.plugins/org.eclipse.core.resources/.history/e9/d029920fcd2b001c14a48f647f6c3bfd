@@ -1,0 +1,21 @@
+package tests;
+
+
+import org.testng.annotations.Test;
+
+import pages.HomePage;
+
+public class Task1 extends TestBase {
+	
+	HomePage homeObject;
+	
+	@Test
+	public void SearchFunction() 
+	{
+		homeObject = new HomePage(driver);
+		homeObject.SearchWithAnItem("iphone");
+		homeObject.SelectFromSuggestedList("iphone 12 pro max");
+		homeObject.SelectTheResultNumber("3");
+	}
+	
+}

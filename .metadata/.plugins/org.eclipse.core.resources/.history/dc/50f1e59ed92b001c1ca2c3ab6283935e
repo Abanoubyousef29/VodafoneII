@@ -1,0 +1,28 @@
+package tests;
+
+
+import org.testng.annotations.Test;
+
+import pages.HomePage;
+import pages.SearchResultPage;
+
+public class Task1 extends TestBase {
+	
+	HomePage homeObject;
+	SearchResultPage SearchResultObject;
+	
+	@Test
+	public void SearchFunction() throws InterruptedException 
+	{
+		homeObject = new HomePage(driver);
+		SearchResultObject = new SearchResultPage(driver);
+		
+		homeObject.SearchWithAnItem("iphone");
+		Thread.sleep(2000);
+		homeObject.SelectFromSuggestedList("iphone 12 pro max");
+		
+		
+
+	}
+	
+}

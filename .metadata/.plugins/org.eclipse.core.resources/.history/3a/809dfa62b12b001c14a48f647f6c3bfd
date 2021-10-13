@@ -1,0 +1,47 @@
+package pages;
+
+
+import java.util.List;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class HomePage extends PageBase {
+
+	public HomePage(WebDriver driver) {
+		super(driver);
+	}
+
+	@FindBy (xpath = "//input[@class='gLFyf gsfi']")
+	WebElement searchBox ;
+	
+//	@FindBy (xpath = "//ul[@jsname='bw4e9b']")
+//	List<WebElement> suggestedList ;
+	
+	@FindBy (xpath = "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[2]/div[2]/div[2]/ul")
+	List<WebElement> suggestedList ;
+	
+	String [] suggestedArray;
+
+	
+	public void SearchWithAnItem(String Searched)
+	{
+		setTextBox(searchBox, Searched);
+	}
+	
+	public void SelectFromSuggestedList(String SearchedItem)
+	{
+
+		suggestedArray = changeListToArray(suggestedList);
+		
+		for (int i=0 ; i < suggestedArray.length ; i++)
+		{
+			System.out.println(suggestedArray[4]);
+			
+		}
+
+	}
+
+
+
+}

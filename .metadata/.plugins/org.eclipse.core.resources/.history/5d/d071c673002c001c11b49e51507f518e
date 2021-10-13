@@ -1,0 +1,24 @@
+package steps;
+
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import tests.TestBase;
+
+public class SearchGoogle extends TestBase{
+	
+	
+
+	@When("^User write \"([^\"]*)\" in the searched box$")
+	public void user_write_in_the_searched_box(String arg1) {
+
+	}
+
+	@Then("^User select \"([^\"]*)\" from the Suggested List$")
+	public void user_select_from_the_Suggested_List(String arg1) {
+	}
+
+	@Then("^User select result number \"([^\"]*)\" from the result List$")
+	public void user_select_result_number_from_the_result_List(String arg1) {
+	}
+
+}
